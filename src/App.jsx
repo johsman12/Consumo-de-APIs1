@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css"; // Importamos los estilos personalizados
 
 function App() {
-  // 1. Definición de estados para la aplicación (Requisito de evaluación)
+  // 1. Definición de estados para la aplicación 
   const [productos, setProductos] = useState([]);
   const [cargando, setCargando] = useState(true);
   const [error, setError] = useState("");
