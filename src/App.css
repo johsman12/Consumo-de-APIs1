@@ -1,0 +1,141 @@
+:root {
+  --color-fondo: #f8f9fa;
+  --color-tarjeta: #ffffff;
+  --color-texto-principal: #212529;
+  --color-texto-secundario: #6c757d;
+  --color-borde: #dee2e6;
+  --color-exito: #198754;
+  --color-azul: #0d6efd;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-fondo);
+}
+
+.contenedor-principal {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.encabezado-app {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.encabezado-app h1 {
+  color: var(--color-texto-principal);
+  margin: 0 0 8px 0;
+  font-size: 2.2rem;
+}
+
+.subtitulo-app {
+  color: var(--color-texto-secundario);
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.linea-division {
+  border: 0;
+  height: 1px;
+  background: var(--color-borde);
+  margin-bottom: 35px;
+}
+
+/* Manejo de los estados visuales */
+.alerta {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 50px;
+}
+
+.estado-carga {
+  color: var(--color-azul);
+}
+
+.estado-error {
+  background-color: #f8d7da;
+  color: #842029;
+  padding: 15px;
+  border-radius: 6px;
+  max-width: 600px;
+  margin: 40px auto;
+  border: 1px solid #f5c2c7;
+}
+
+/* Grid de productos */
+.cuadricula-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.tarjeta-producto {
+  background-color: var(--color-tarjeta);
+  border: 1px solid var(--color-borde);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta-producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contenedor-imagen {
+  background-color: #ffffff;
+  padding: 20px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #f1f3f5;
+}
+
+.contenedor-imagen img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.info-producto {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.info-producto h3 {
+  font-size: 1rem;
+  color: var(--color-texto-principal);
+  margin: 0 0 12px 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 40px;
+}
+
+.etiqueta-categoria {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  background-color: #e9ecef;
+  color: #495057;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+  align-self: flex-start;
+  margin-bottom: 15px;
+}
+
+.precio-producto {
+  font-size: 1.4rem;
+  color: var(--color-exito);
+  font-weight: 700;
+  margin: auto 0 0 0;
+}
